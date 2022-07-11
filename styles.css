@@ -1,0 +1,201 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #FFFFFF;
+    box-shadow: 0px 11px 5px -5px rgba(34, 60, 80, 0.6);
+    z-index: 15;
+}
+
+nav {
+    height: 100%;
+    width: 400px;
+    position: absolute;
+    background-color: #5a5a5a;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    transition: 0.5s ease;
+    transform: translateX(-100%);
+}
+
+main {
+    width: 100%;
+    padding: 1rem 8rem;
+    margin-top: 80px;
+    background-color: #fdfdfd;
+    position: relative;
+    min-height: 850px;
+}
+
+li {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style-type: none;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+img {
+    position: relative;
+    top: -2px;
+}
+
+li:first-child {
+    padding-top: 5rem;
+}
+
+ul {
+    padding-left: 0;
+    font-size: 1.5rem;
+    color: #c6c8c9;
+}
+
+li:hover {
+    color:#FFFFFF;
+    cursor: pointer;
+}
+
+.header-container {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem 8rem;
+}
+
+.menu-button {
+    border: none;
+    background-color: #FFFFFF;
+    color: #5a5a5a;
+}
+
+.menu-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.blocks-conainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 1rem 8rem;
+}
+
+.item {
+    width: 17.5rem;
+    height: 17.5rem;
+    padding: 1rem;
+    border: 1px solid #c6c8c9;
+}
+
+.item:hover {
+    box-shadow: 0px 5px 12px 11px rgba(34, 60, 80, 0.2);
+    cursor: pointer;
+}
+
+.item-img {
+    border-radius: 0.4rem;
+    height: 164px;
+}
+
+.item-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.item-button {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0;
+    border: none;
+    background-color: inherit;
+}
+
+.icon-reverse {
+    color: #FFFFFF;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    transition: .5s;
+    fill: currentColor;
+
+}
+
+.icon:hover {
+    color: rgb(83, 83, 83);
+    cursor: pointer;
+}
+
+.grey {
+    color: #888;
+}
+
+.flip-container {
+	perspective: 1000;
+    margin-bottom: 1.5rem;
+}
+
+.transform {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 17.5rem;
+    height: 17.5rem;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.visible {
+    transform: translateX(0px);
+}
